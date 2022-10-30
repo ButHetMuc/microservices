@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.RestController;
 @RequestMapping("/fallback")
 public class FallbackController {
 
-    @GetMapping("/butFallback")
+    @GetMapping("/")
     public ResponseEntity<String> fallbackResponse(){
         return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR)
                 .body("got a problem");
