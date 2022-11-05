@@ -1,5 +1,8 @@
 server:
   port: 9191
+redis:
+  host: localhost
+  port: 6379
 
 spring:
   application:

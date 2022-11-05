@@ -9,6 +9,9 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.web.client.RestTemplate;
 
+import java.util.ArrayList;
+import java.util.List;
+
 @Service
 @Slf4j
 public class UserService {
@@ -38,5 +41,11 @@ public class UserService {
         rt.setUser(user);
         rt.setDepartment(department);
         return rt;
+    }
+
+    public List<Users> getAllUsers() {
+        List<Users> users = new ArrayList<>();
+        users = userRepo.findAll();
+        return  users;
     }
 }
